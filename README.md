@@ -1,195 +1,141 @@
-<!-- ===================== BANNER ===================== -->
+<div align="center">
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/thulunga/thulunga/main/banner.svg" />
-</p>
+<br/>
 
-<!-- ===================== TYPING ===================== -->
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=9B87F5&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Thulunga+%F0%9F%91%8B;Product+Engineer+%7C+Full-Stack+Developer;Building+real+systems%2C+not+demos;Consistency+over+Talent+%F0%9F%94%A5)](https://git.io/typing-svg)
 
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?lines=Product+Engineer;Full+Stack+Developer;Angular+Specialist;Building+StoreBanao+🚀;Building+in+Public+🔥;Consistency+Over+Talent&center=true&width=700&height=45">
-</p>
+<br/>
 
-<!-- ===================== BADGES ===================== -->
+[![Profile Views](https://komarev.com/ghpvc/?username=thulunga&label=Profile+Views&color=7c5cbf&style=flat-square)](https://github.com/thulunga)
+&nbsp;
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-thulunga-0a66c2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thulunga/)
+&nbsp;
+[![Email](https://img.shields.io/badge/Email-thulunga.tb%40gmail.com-ea4335?style=flat-square&logo=gmail&logoColor=white)](mailto:thulunga.tb@gmail.com)
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=thulunga&label=Profile%20Views&color=0e75b6&style=flat" />
-  <img src="https://img.shields.io/github/followers/thulunga?style=social" />
-  <img src="https://img.shields.io/github/stars/thulunga?style=social" />
-</p>
+</div>
 
 ---
 
-# 🧠 Identity
+## 🧠 About Me
 
-I’m a **Product Engineer** focused on building **real-world scalable systems**, not just features.
-
-* 👨‍💻 Software Developer I at **SOTI Inc.**
-* 📈 Promoted from Associate Developer → Developer I
-* 🏆 MVP Nominee
-* 🎓 B.Tech in Computer Science (NIT Calicut)
-* 🌏 From BTR, Assam
-
-### What I care about:
-
-* ⚙️ Systems that scale
-* 🧩 Clean, maintainable architecture
-* 🚀 Product-first engineering
-* 📈 Long-term impact over short-term hacks
+- 👨‍💻 **Software Developer I** at **SOTI Inc.** - Promoted from Associate Developer → Developer I · MVP Nominee-2x
+- 🎓 **B.Tech in Computer Science** - NIT Calicut
+- 🌏 From **BTR, Assam** - Northeast India
+- 🚀 Actively building and shipping **[StoreBanao](https://storebanao.in)** - a live, production SaaS product
+- ⚙️ I care about systems that scale, clean architecture, and product-first engineering
 
 ---
 
-# 🚀 Flagship Product
+## 🚀 Featured Project - StoreBanao
 
-## 🛒 StoreBanao
+<div align="center">
 
-<p align="center">
-  <a href="https://storebanao.in" target="_blank">
-    <img src="https://img.shields.io/badge/🚀%20Live%20Product-StoreBanao-blue?style=for-the-badge" />
-  </a>
-</p>
+[![Live](https://img.shields.io/badge/🟢%20Live%20at-storebanao.in-5ddba8?style=for-the-badge)](https://storebanao.in)
 
-### 📌 Overview
+</div>
 
-A **multi-vendor e-commerce platform** focused on empowering local businesses, especially from Northeast India.
+> A **multi-vendor e-commerce SaaS platform** for local Indian sellers - built, deployed, and actively maintained. Focused on empowering small businesses, especially from Northeast India.
 
-### 🧩 Core Features
+**What makes it real:**
+- 🏪 Vendor-specific subdomains - `vendor.storebanao.in`
+- 🔐 Clerk-powered seller authentication with webhook integration
+- 📦 Full product & order management system
+- 💳 Billing system - Manual UPI billing (live) → Razorpay subscriptions (in progress)
+- 🖼️ Cloudinary image CDN with `q_auto` / `f_auto` optimization
+- 📧 Transactional emails via Resend
+- 📊 Admin dashboard with analytics
 
-* 🏪 Vendor-specific subdomains (`vendor.storebanao.in`)
-* 🔐 Secure authentication (JWT + Refresh Tokens)
-* 📊 Admin dashboard with deep analytics
-* 🧠 Modular & scalable architecture
-* 📦 Product & order management system
+### Architecture
 
----
-
-# 🏗️ Architecture Thinking
-
-```txt
-Frontend (Angular)
-   ↓
-API Layer (Node.js / Express)
-   ↓
-Authentication (JWT + Refresh Tokens)
-   ↓
-Database (MongoDB)
-   ↓
-Storage (Firebase Cloud Storage)
-   ↓
-Deployment (Vercel / Railway)
+```
+Next.js 14 (App Router)   →   Node.js / Express API
+         ↓                            ↓
+    Clerk (Auth)              PostgreSQL via Prisma
+         ↓                            ↓
+   Cloudinary (Images)          Railway (DB Host)
+         ↓
+Vercel (Frontend)  +  Railway (API)
 ```
 
-### 💡 Key Decisions
-
-* ⚡ Separation of concerns (UI / API / Auth)
-* 🔄 Refresh token system for seamless sessions
-* 🧱 Modular structure for scalability
-* 🌐 Subdomain-based multi-tenancy architecture
-
----
-
-# 📊 Product Mindset
-
-This is not built as a demo project.
-
-* Built for **real users & vendors**
-* Designed for **scalability from day one**
-* Focus on **user experience & flows**
-* Moving towards a **full SaaS platform**
+**Key decisions:**
+- **Turborepo monorepo** - clean multi-package separation from day one
+- **PostgreSQL over NoSQL** - relational integrity + ACID compliance
+- **Clerk webhooks** - required explicit `isWebhookRoute` check before domain rewrite in middleware
+- **Cloudinary `public_id` stored in DB** - enables image cleanup on product deletion
 
 ---
 
-# 🚧 Currently Building (In Public)
+## 🧰 Tech Stack
 
-## 🌐 thulunga.com
+**Frontend**
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Building%20In%20Public-orange?style=for-the-badge" />
-</p>
+![Next.js](https://img.shields.io/badge/Next.js_14-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-0f172a?style=flat-square&logo=tailwindcss&logoColor=38bdf8)
+![React](https://img.shields.io/badge/React-20232a?style=flat-square&logo=react&logoColor=61dafb)
 
-### 🔥 Vision
+**Backend**
 
-* 🧠 Dev journal (real learnings, not generic tutorials)
-* 🧩 System design breakdowns
-* 🚀 Product journey (StoreBanao & future SaaS)
-* 💡 Turning ideas → execution
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2d3748?style=flat-square&logo=prisma&logoColor=white)
 
----
+**Auth · Storage · Payments · Email**
 
-# 🧠 Tech Stack
+![Clerk](https://img.shields.io/badge/Clerk-6c47ff?style=flat-square&logo=clerk&logoColor=white)
+![Cloudinary](https://img.shields.io/badge/Cloudinary-3448c5?style=flat-square&logo=cloudinary&logoColor=white)
+![Razorpay](https://img.shields.io/badge/Razorpay-02042b?style=flat-square&logo=razorpay&logoColor=3395ff)
+![Resend](https://img.shields.io/badge/Resend-000000?style=flat-square)
 
-<p align="center">
+**Infra & Tooling**
 
-Frontend <img src="https://skillicons.dev/icons?i=angular,ts,js,html,css" />
-
-Backend <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb" />
-
-Tools & Platforms <img src="https://skillicons.dev/icons?i=git,github,firebase,supabase,vercel" />
-
-</p>
-
----
-
-# 📈 Engineering Activity
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=thulunga&theme=tokyo-night&hide_border=true" />
-</p>
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=flat-square&logo=railway&logoColor=white)
+![Turborepo](https://img.shields.io/badge/Turborepo-EF4444?style=flat-square&logo=turborepo&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 
 ---
 
-# 📊 GitHub Stats
+## 📊 GitHub Stats
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=thulunga&show_icons=true&theme=tokyonight&hide_border=true" />
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=thulunga&theme=tokyonight&hide_border=true" />
-</p>
+<img src="https://github-readme-stats.vercel.app/api?username=thulunga&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d0d14&title_color=9b87f5&icon_color=5ddba8&text_color=c8c6e0" height="165"/>
+&nbsp;
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=thulunga&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d0d14&title_color=9b87f5&text_color=c8c6e0" height="165"/>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=thulunga&layout=compact&theme=tokyonight&hide_border=true" />
-</p>
+<br/><br/>
 
----
+<img src="https://streak-stats.demolab.com?user=thulunga&theme=tokyonight&hide_border=true&background=0d0d14&ring=9b87f5&fire=5ddba8&currStreakLabel=c8c6e0" />
 
-# 🎯 Current Focus
+<br/><br/>
 
-* ⚡ Building scalable SaaS products
-* 🧠 Mastering system design
-* 🤖 Developing AI tools (**CodeTalks**)
-* 🌐 Product-led engineering
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=thulunga&theme=tokyo-night&hide_border=true&bg_color=0d0d14&color=9b87f5&line=5ddba8&point=f5c77e" />
+
+</div>
 
 ---
 
-# 🤝 Connect With Me
+## 🎯 Currently Working On
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/thulunga/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Thulunga-blue?style=for-the-badge&logo=linkedin" />
-  </a>
-  <a href="mailto:thulunga.tb@gmail.com">
-    <img src="https://img.shields.io/badge/Email-thulunga.tb%40gmail.com-red?style=for-the-badge&logo=gmail" />
-  </a>
-</p>
+| What | Status |
+|---|---|
+| StoreBanao - B1 Billing (Manual UPI) | 🔨 In Progress |
+| StoreBanao - Razorpay Subscriptions | 📋 Planned (Month 2) |
+| thulunga.com - Dev journal & system design blog | 🏗️ Building |
+| CodeTalks - AI-powered dev tooling | 💡 Early Stage |
 
 ---
 
-# ⚡ Philosophy
+## ⚡ Philosophy
 
-> “Consistency beats talent. Systems beat motivation. Execution beats ideas.”
-
----
-
-# 🧭 Long-Term Vision
-
-* Build scalable products that impact real users
-* Transition from developer → product builder → founder
-* Create systems that empower communities
+> *"Consistency beats talent. Systems beat motivation. Execution beats ideas."*
 
 ---
 
-<p align="center">
-  ⭐️ Follow the journey — this is just the beginning.
-</p>
+<div align="center">
+
+⭐ *Building in public - this is just the beginning.*
+
+</div>
